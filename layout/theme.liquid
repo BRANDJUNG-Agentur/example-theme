@@ -30,7 +30,6 @@
     {{ content_for_header }}
 
     {{ 'styles.css' | asset_url | stylesheet_tag }}
-
   </head>
 
   <body class="gradient">
@@ -39,5 +38,8 @@
     <main id="MainContent">
       {{ content_for_layout }}
     </main>
+    {% javascript %}
+      console.log('connexion exact');
+    {% endjavascript %}
   </body>
 </html>
